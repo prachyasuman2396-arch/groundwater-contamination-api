@@ -9,9 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# ----------------------------
-# Custom CSS
-# ----------------------------
+
 st.markdown("""
 <style>
 .main-title{
@@ -46,9 +44,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ----------------------------
-# Header
-# ----------------------------
 st.markdown(
     "<div class='main-title'>💧 Groundwater Contamination Risk Intelligence</div>",
     unsafe_allow_html=True
@@ -58,12 +53,9 @@ st.caption("AI Powered Water Risk Detection System")
 
 st.divider()
 
-# ----------------------------
-# Sidebar Controls
-# ----------------------------
+
 st.sidebar.title("Controls")
 
-# fetch example villages
 try:
     examples = requests.get(f"{API_URL}/examples").json()
     villages = examples["example_villages"]
@@ -85,9 +77,7 @@ predict_btn = st.sidebar.button("Predict Risk")
 st.sidebar.divider()
 st.sidebar.info("Powered by FastAPI + Clustering + Risk Ranking")
 
-# ----------------------------
-# Prediction
-# ----------------------------
+
 if predict_btn and village:
 
     with st.spinner("Analyzing groundwater contamination..."):
@@ -104,9 +94,6 @@ if predict_btn and village:
             st.error("API connection failed")
             st.stop()
 
-    # ----------------------------
-    # Error handling
-    # ----------------------------
     if "error" in data:
         st.error(data["error"])
         st.write("Try:")
@@ -115,9 +102,7 @@ if predict_btn and village:
 
     result = data["data"]
 
-    # ----------------------------
-    # Top Metrics
-    # ----------------------------
+    
     col1, col2, col3 = st.columns(3)
 
     with col1:
@@ -147,9 +132,6 @@ if predict_btn and village:
 
     st.divider()
 
-    # ----------------------------
-    # Contaminants
-    # ----------------------------
     st.markdown("## Top Contaminants")
 
     contaminants = result["top_contaminants"]
@@ -178,9 +160,24 @@ if predict_btn and village:
 
     st.divider()
 
-    # ----------------------------
-    # Risk Insight
-    # ----------------------------
+  
+    st.markdown("## Possible Health Risks")
+
+    diseases = result["possible_diseases"]
+
+    d1, d2, d3 = st.columns(3)
+
+    with d1:
+        card("Primary Risk", diseases[0])
+
+    with d2:
+        card("Secondary Risk", diseases[1])
+
+    with d3:
+        card("Tertiary Risk", diseases[2])
+
+    st.divider()
+
     st.markdown("## Risk Insight")
 
     if "High" in risk:
@@ -190,8 +187,6 @@ if predict_btn and village:
     else:
         st.success("Water quality within acceptable limits.")
 
-# ----------------------------
-# Footer
-# ----------------------------
+
 st.divider()
 st.caption("Groundwater Risk Intelligence Platform • Production Deployment")
