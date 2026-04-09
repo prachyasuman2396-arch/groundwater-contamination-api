@@ -44,52 +44,6 @@ https://groundwater-contamination-api.onrender.com/docs
 - Possible health risks  
 
 Example:
-# 💧 Groundwater Risk Intelligence System
-
-AI-powered platform to predict groundwater contamination risk, cluster villages, identify top pollutants, and estimate possible health risks using Machine Learning.
-
----
-
-# 🚀 Live Demo
-
-### 🌐 Streamlit App
-https://groundwater-contamination-api-v4v6q3bjmx3mglzpww7xqc.streamlit.app
-
-### ⚡ FastAPI Endpoint
-https://groundwater-contamination-api.onrender.com
-
-### 📘 API Docs
-https://groundwater-contamination-api.onrender.com/docs
-
----
-
-# ✨ Features
-
-- ML-based groundwater risk prediction  
-- Village-level contamination intelligence  
-- Risk classification (Low / Medium / High)  
-- Top contaminant ranking  
-- Disease risk prediction (health-aware AI)  
-- Agglomerative clustering for zone detection  
-- Explainable contaminant-based risk reasoning  
-- FastAPI production REST API  
-- Streamlit interactive dashboard  
-- Cloud deployment (Render + Streamlit Cloud)  
-- Fully modular ML pipeline  
-
----
-
-# 🧠 What This System Does
-
-**Input:** Village name  
-
-**Output:**
-- Risk level  
-- Cluster zone  
-- Top contaminants  
-- Possible health risks  
-
-Example:
 Village: Badmal
 Risk Level: Low Risk
 Cluster: 2
