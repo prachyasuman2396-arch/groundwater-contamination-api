@@ -142,21 +142,36 @@ GET /predict?village=Badmal
   }
 }
 
+---
 
-📊 Dataset
+# 📊 Dataset
+
 Groundwater contamination dataset containing:
-NO3
-F
-Cl
-SO4
-TH
-Ca
-Mg
-Na
-Fe
-Raster value
-Village name
 
+- NO3  
+- F  
+- Cl  
+- SO4  
+- TH  
+- Ca  
+- Mg  
+- Na  
+- Fe  
+- Raster value  
+- Village name  
+
+---
+🔮 Future Improvements
+Interactive contamination map
+Real-time groundwater monitoring
+Satellite raster integration
+Deep learning risk prediction
+Temporal groundwater trend analysis
+Multi-district scaling
+👩‍💻 Author
+Prachya Das
+CSE (AI & ML)
+Cybersecurity & Machine Learning Enthusiast
 
 
 
