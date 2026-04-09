@@ -125,7 +125,7 @@ GET /predict?village=Badmal
 
 
 
-
+---
 # 📊 Dataset
 
 Groundwater contamination dataset containing:
@@ -142,21 +142,31 @@ Groundwater contamination dataset containing:
 - Raster value  
 - Village name  
 
+
 ---
-🔮 Future Improvements
-Interactive contamination map
-Real-time groundwater monitoring
-Satellite raster integration
-Deep learning risk prediction
-Temporal groundwater trend analysis
-Multi-district scaling
 
+# 🔮 Future Improvements
 
+- Interactive contamination map  
+- Real-time groundwater monitoring  
+- Satellite raster integration  
+- Deep learning risk prediction  
+- Temporal groundwater trend analysis  
+- Multi-district scaling  
 
-👩‍💻 Author
-Prachya Das
-CSE (AI & ML)
-Cybersecurity & Machine Learning Enthusiast
+---
+
+# 👩‍💻 Author
+
+**Prachya Das**  
+CSE (AI & ML)  
+Cybersecurity & Machine Learning Enthusiast  
+
+---
+
+# ⭐ If you like this project
+
+Give it a ⭐ on GitHub and feel free to contribute!
 
 
 
