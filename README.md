@@ -150,6 +150,9 @@ Satellite raster integration
 Deep learning risk prediction
 Temporal groundwater trend analysis
 Multi-district scaling
+
+
+
 👩‍💻 Author
 Prachya Das
 CSE (AI & ML)
