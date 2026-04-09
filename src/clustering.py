@@ -7,7 +7,6 @@ import numpy as np
 
 def run_clustering(X):
 
-    # force 3 clusters
     model = AgglomerativeClustering(
         n_clusters=3,
         linkage='ward'

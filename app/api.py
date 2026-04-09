@@ -5,8 +5,8 @@ from pathlib import Path
 
 app = FastAPI(
     title="Groundwater Contamination Risk API",
-    description="Predict groundwater risk level and top contaminants for villages",
-    version="1.0.0"
+    description="Predict groundwater risk level, contaminants and diseases",
+    version="2.0.0"
 )
 
 # -----------------------------
@@ -24,7 +24,10 @@ try:
         "cluster",
         "contaminant_1",
         "contaminant_2",
-        "contaminant_3"
+        "contaminant_3",
+        "disease_1",
+        "disease_2",
+        "disease_3"
     ]
 
     missing = [c for c in REQUIRED_COLUMNS if c not in df.columns]
@@ -46,7 +49,8 @@ def health():
     return {
         "status": "running",
         "service": "groundwater-risk-api",
-        "villages_loaded": len(df)
+        "villages_loaded": len(df),
+        "version": "2.0 (with disease prediction)"
     }
 
 
@@ -95,10 +99,17 @@ def predict(
                 "village": row["VILLAGE"],
                 "risk_level": row["risk_level"],
                 "cluster": int(row["cluster"]),
+
                 "top_contaminants": [
                     row["contaminant_1"],
                     row["contaminant_2"],
                     row["contaminant_3"]
+                ],
+
+                "possible_diseases": [
+                    row["disease_1"],
+                    row["disease_2"],
+                    row["disease_3"]
                 ]
             }
         }

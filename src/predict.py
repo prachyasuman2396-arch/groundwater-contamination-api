@@ -21,4 +21,9 @@ def predict_village(df, village_name):
     print("2.", row['contaminant_2'])
     print("3.", row['contaminant_3'])
 
+
+    print("\nPossible Diseases:")
+    print("1.", row['disease_1'])
+    print("2.", row['disease_2'])
+    print("3.", row['disease_3'])
     print("=" * 40)
