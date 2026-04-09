@@ -122,9 +122,25 @@ streamlit run streamlit_app.py
 ### Request
 
 GET /predict?village=Badmal
+### Response
 
+```json
+{
+  "status": "success",
+  "data": {
+    "village": "Badmal",
+    "risk_level": "Low Risk",
+    "cluster": 2,
+    "top_contaminants": ["NO3","Mg","F"],
+    "possible_diseases": [
+      "Blue baby syndrome",
+      "Methemoglobinemia",
+      "Thyroid problems"
+    ]
+  }
+}
 
-
+```
 ---
 # 📊 Dataset
 
